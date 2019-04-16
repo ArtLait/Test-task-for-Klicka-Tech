@@ -41,13 +41,12 @@ export default function(state = {}, action) {
             }
 
         case 'FILTER_BY_SONG' :
-            console.log('action.payload', action.payload);
             return {
                 ...state,
                 musics: state.musics.filter((item) => (item.song === action.payload))
             }
 
-        case 'FILTER_BY_YEAR' :
+        case 'FILTER_BY_DATE' :
             return {
                 ...state,
                 musics: state.musics.filter((item) => (item.date === action.payload))
