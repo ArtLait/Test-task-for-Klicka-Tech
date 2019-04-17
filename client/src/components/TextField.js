@@ -31,13 +31,9 @@ class Filter extends React.Component {
       this.setState({ [name]: value });
       this.props.filter(value);
     };
-
-    getYear(date) {
-      return new Date(date).getFullYear();
-    }
     
     render() {
-        const { classes, data, name, type } = this.props;
+        const { classes, data, name } = this.props;
         return <TextField
           id="standard-select-currency"
           select
@@ -55,7 +51,7 @@ class Filter extends React.Component {
         >
           {data.map(option => (
             <MenuItem key={option.id} value={option.value}>
-              {type !== 'date' ? option.value : this.getYear(option.value)}
+              { option.value }
             </MenuItem>
           ))}
         </TextField>}

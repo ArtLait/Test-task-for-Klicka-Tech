@@ -20,9 +20,9 @@ class Filter extends React.Component {
       let { names, songs, dates, filterByName, filterBySong, filterByDate } = this.props;
         return(
             <Grid item xs={3}>
-                <TextField data={names} name={'исполнителя'} type='string' filter={filterByName} />
-                <TextField data={songs} name={'песню'} type='string' filter={filterBySong} />
-                <TextField data={dates} name={'год'} type='date' filter={filterByDate}/>
+                <TextField data={names} name={'исполнителя'} filter={filterByName} />
+                <TextField data={songs} name={'песню'} filter={filterBySong} />
+                <TextField data={dates} name={'год'} filter={filterByDate}/>
             </Grid>
         )
     }

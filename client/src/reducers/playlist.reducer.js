@@ -17,16 +17,18 @@ export default function(state = {}, action) {
                 dates: []
             };
             let map = {};
-            state.musics.forEach(item => {
+            state.musics = state.musics.map((item) => {
                 for (let key in item) {
                     let el = item[key];
                     if (key !== 'type' && key !== 'id' && !map[el] ) {
+                        if (key === 'date') { el = new Date(el).getFullYear(); item[key] = el; }
                         mappedMusics[key + 's'].push({
                             id: Math.round(Math.random() * 1000000),
                             value: el});
                             map[el] = true;
                     }
                 }
+                return item;
             });
 
             return {

@@ -149,7 +149,7 @@ class EnhancedTable extends React.Component {
                         </TableCell>
                         <TableCell align="right">{n.song}</TableCell>
                         <TableCell align="right">{n.type}</TableCell>
-                        <TableCell align="right">{new Date(n.date).getFullYear()}</TableCell>
+                        <TableCell align="right">{n.date}</TableCell>
                       </TableRow>
                     );
                   })}
